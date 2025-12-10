@@ -1,0 +1,75 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h1>
+        Calculator
+    </h1>
+    <table>
+        <tr>
+            <td>N1 : </td>
+            <td><input type="text" name="n1" id="n1"></td>
+        </tr>
+        <tr>
+            <td>N2 : </td>
+            <td><input type="text" name="n2" id="n2"></td>
+        </tr>
+        <tr>
+            <td>Result : </td>
+            <td><input type=""></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>
+                <button name="add_btn" id="add_btn" style="background-color: yellow;">ADD</button>
+                <button name="sub_btn" id="sub_btn" style="background-color: red;">SUB</button>
+            </td> 
+        </tr>
+        <tr>
+            <td>
+                <button name="mul_btn" id="mul_btn" style="background-color: green;">MUL</button>
+                <button name="div_btn" id="div_btn" style="background-color: blue;">DIV</button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        
+        const n1 = document.getElementById("n1");
+        const n2 = document.getElementById("n2");
+
+        
+        const result = document.querySelector("input[type='']");
+
+    
+        document.getElementById("add_btn").addEventListener("click", function () {
+            result.value = Number(n1.value) + Number(n2.value);
+        });
+
+        document.getElementById("sub_btn").addEventListener("click", function () {
+            result.value = Number(n1.value) - Number(n2.value);
+        });
+
+        document.getElementById("mul_btn").addEventListener("click", function () {
+            result.value = Number(n1.value) * Number(n2.value);
+        });
+
+        document.getElementById("div_btn").addEventListener("click", function () {
+            if (Number(n2.value) === 0) {
+                result.value = "Error";
+            } else {
+                result.value = Number(n1.value) / Number(n2.value);
+            }
+        });
+    </script>
+
+</body>
+</html>
